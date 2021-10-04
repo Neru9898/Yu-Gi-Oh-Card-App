@@ -21,19 +21,25 @@ export const Body = () => {
 
   return (
     <>
-      <div className="box">
+      <div className="box ">
         {console.log(cardSetList)}
 
         {cardSetList.map((card) => {
           return card.type === "XYZ Pendulum Effect Monster" ? (
-            <img src={card.card_images[0].image_url_small} />
+            <div className="img__wrap">
+              <img
+                className="img__img"
+                src={card.card_images[0].image_url_small}
+              />
+              <div className="img__description">
+                <h3>{card.name}</h3>
+                <p>{card.desc}</p>
+              </div>
+            </div>
           ) : null;
         })}
-        <div class="overlay">
-          <div class="text">Hello World</div>
-        </div>
       </div>
-      <div className="box">
+      {/* <div className="box">
         {console.log(cardSetList)}
 
         {cardSetList.map((card) => {
@@ -59,7 +65,7 @@ export const Body = () => {
             <img src={card.card_images[0].image_url_small} />
           ) : null;
         })}
-      </div>
+      </div> */}
     </>
   );
 };

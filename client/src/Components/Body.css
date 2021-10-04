@@ -6,25 +6,34 @@
   overflow: scroll;
 }
 
-.image {
-  display: block;
-  width: 240px;
-  height: 480px;
-  margin: 0 5px;
+/* relevant styles */
+.img__wrap {
+  position: relative;
+  height: 420px;
+  width: 360px;
 }
-.overlay {
+.img__img {
+  height: 420px;
+  width: 360px;
+}
+
+.img__description {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
-  width: 100%;
+  background: rgba(3, 4, 7, 0.86);
+  color: #fff;
+  visibility: hidden;
   opacity: 0;
-  transition: 0.5s ease;
-  background-color: #008cba;
+
+  /* transition effect. not necessary */
+  transition: opacity 0.2s, visibility 0.2s;
 }
-.image:hover .overlay {
+
+.img__wrap:hover .img__description {
+  visibility: visible;
   opacity: 1;
 }
 .box::-webkit-scrollbar {
