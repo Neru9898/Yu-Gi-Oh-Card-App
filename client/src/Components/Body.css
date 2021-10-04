@@ -1,0 +1,18 @@
+.box {
+  border: 5px solid black;
+  width: 50%;
+  float: left;
+  display: flex;
+  overflow: scroll;
+}
+
+Img {
+  display: block;
+  max-width: 480px;
+  max-height: 480px;
+  width: auto;
+  height: auto;
+}
+.box::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
