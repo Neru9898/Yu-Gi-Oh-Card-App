@@ -12,7 +12,6 @@
   background-repeat: repeat-x;
   background-size: cover;
   overflow: visible;
-  overflow-y: hidden;
 }
 
 .App::-webkit-scrollbar {
