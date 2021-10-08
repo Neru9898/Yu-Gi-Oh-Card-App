@@ -7,17 +7,18 @@
 }
 
 /* relevant styles */
-.img__wrap {
+.imgbox {
   position: relative;
-  height: 420px;
-  width: 360px;
+  height: auto;
+  width: auto;
+  border: 5px solid pink;
 }
-.img__img {
-  height: 420px;
-  width: 360px;
+.imgcard {
+  height: auto;
+  width: auto;
 }
 
-.img__description {
+.imginfo {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -32,7 +33,7 @@
   transition: opacity 0.2s, visibility 0.2s;
 }
 
-.img__wrap:hover .img__description {
+.imgbox:hover .imginfo {
   visibility: visible;
   opacity: 1;
 }

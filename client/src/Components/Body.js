@@ -26,46 +26,16 @@ export const Body = () => {
 
         {cardSetList.map((card) => {
           return card.type === "XYZ Pendulum Effect Monster" ? (
-            <div className="img__wrap">
-              <img
-                className="img__img"
-                src={card.card_images[0].image_url_small}
-              />
-              <div className="img__description">
+            <div className="imgbox">
+              <img className="imgcard" src={card.card_images[0].image_url} />
+              <div className="imginfo">
                 <h3>{card.name}</h3>
-                <p>{card.desc}</p>
+                <h3>{card.desc}</h3>
               </div>
             </div>
           ) : null;
         })}
       </div>
-      {/* <div className="box">
-        {console.log(cardSetList)}
-
-        {cardSetList.map((card) => {
-          return card.type === "XYZ Monster" ? (
-            <img src={card.card_images[0].image_url_small} />
-          ) : null;
-        })}
-      </div>
-      <div className="box">
-        {console.log(cardSetList)}
-
-        {cardSetList.map((card) => {
-          return card.type === "Tuner Monster" ? (
-            <img src={card.card_images[0].image_url_small} />
-          ) : null;
-        })}
-      </div>
-      <div className="box">
-        {console.log(cardSetList)}
-
-        {cardSetList.map((card) => {
-          return card.type === "Ritual Effect Monster" ? (
-            <img src={card.card_images[0].image_url_small} />
-          ) : null;
-        })}
-      </div> */}
     </>
   );
 };
