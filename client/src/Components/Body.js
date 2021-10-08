@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./Body.css";
+import { DisplayCardsHorizontal } from "./DisplayCardsHorizontal";
 export const Body = () => {
   const [cardSetList, setCardSetList] = useState([]);
   useEffect(() => {
@@ -15,13 +16,14 @@ export const Body = () => {
         }
         return 0;
       });
-      setCardSetList(allCardList);
+      setCardSetList(res.data.data);
     });
   }, []);
 
   return (
     <>
-      <div className="box ">
+      <DisplayCardsHorizontal />
+      {/* <div className="box ">
         {console.log(cardSetList)}
 
         {cardSetList.map((card) => {
@@ -35,7 +37,7 @@ export const Body = () => {
             </div>
           ) : null;
         })}
-      </div>
+      </div> */}
     </>
   );
 };
