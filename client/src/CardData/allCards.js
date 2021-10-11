@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import "axios";
-export const allCards = () => {
+import axios from "axios";
+export const AllCards = () => {
   const [cardList, setCardList] = useState([]);
 
   useEffect(() => {
