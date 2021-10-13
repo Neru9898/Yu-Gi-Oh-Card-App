@@ -1,6 +1,6 @@
-import { AllCards } from "./AllCards";
+import { AllCards } from "../CardData/AllCards";
 
-export const AllCardType = () => {
+export const allCardType = () => {
   const cardList = AllCards();
   let cardTypeList = [];
   cardList.forEach((card) => {
