@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Navbar, Offcanvas, Button, ListGroup } from "react-bootstrap";
+import {
+  Nav,
+  NavDropdown,
+  Navbar,
+  Offcanvas,
+  Button,
+  ListGroup,
+} from "react-bootstrap";
 
 export const NavMenu = () => {
   const [show, setShow] = useState(false);
