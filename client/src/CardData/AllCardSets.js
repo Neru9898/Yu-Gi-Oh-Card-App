@@ -6,8 +6,14 @@ export const AllCardSets = () => {
   useEffect(() => {
     axios
       .get("https://db.ygoprodeck.com/api/v7/cardsets.php")
-      .then((res) => setCardSetList(res.data.data));
+      .then((res) =>
+        setCardSetList(
+          res.data.sort(
+            (a, b) => Date.parse(b.tcg_date) - Date.parse(a.tcg_date)
+          )
+        )
+      );
   }, []);
-  console.log(cardSetList);
+
   return cardSetList;
 };
