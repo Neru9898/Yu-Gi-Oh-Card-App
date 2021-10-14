@@ -18,7 +18,18 @@ export const NavMenu = () => {
       <Navbar bg="dark" variant="dark">
         <Button onClick={handleShow}>Menu</Button>
         <Offcanvas show={show} onHide={handleClose}>
-          <Offcanvas.Header closeButton> </Offcanvas.Header>
+          <Offcanvas.Header closeButton>
+            {" "}
+            <Navbar.Brand href="#home">
+              <img
+                src="https://www.konami.com/kde_cms/eu_publish/uploads/EN-and-DE-Resized.png"
+                width="300"
+                height="120"
+                className="d-inline-block align-top"
+                alt="React Bootstrap logo"
+              />
+            </Navbar.Brand>
+          </Offcanvas.Header>
           <ListGroup variant="flush">
             <ListGroup.Item>Cards</ListGroup.Item>
             <ListGroup.Item>Card Sets</ListGroup.Item>
