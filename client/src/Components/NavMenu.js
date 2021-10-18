@@ -18,17 +18,34 @@ export const NavMenu = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <Container fluid>
-      <Navbar>
-        <Button
-          style={{ backgroundColor: "transparent", border: "none" }}
-          onClick={handleShow}
-        >
-          <List style={{ width: "45px", height: "45px" }} />
-        </Button>
-
-        <Col>Insert Image</Col>
-      </Navbar>
-    </Container>
+    <Navbar>
+      <Container fluid>
+        <Row>
+          <Col>
+            <Button
+              variant="dark"
+              onClick={handleShow}
+              style={{
+                backgroundColor: "transparent",
+                border: "none",
+              }}
+            >
+              <List style={{ height: "45px", width: "45px" }} />
+            </Button>
+            <Offcanvas show={show} onHide={handleClose}>
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title>Yu-Gi-Oh</Offcanvas.Title>
+              </Offcanvas.Header>
+              <ListGroup>
+                <ListGroup.Item>All Cards</ListGroup.Item>
+                <ListGroup.Item>All Cards</ListGroup.Item>
+                <ListGroup.Item>All Cards</ListGroup.Item>
+                <ListGroup.Item>All Cards</ListGroup.Item>
+              </ListGroup>
+            </Offcanvas>
+          </Col>
+        </Row>
+      </Container>
+    </Navbar>
   );
 };
