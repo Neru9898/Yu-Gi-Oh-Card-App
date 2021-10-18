@@ -9,7 +9,7 @@ export const Body = () => {
   return (
     <>
       <NavMenu />
-      {/* <DisplayCardsHorizontal cardListToDisplay={getRequestedType} /> */}
+      <DisplayCardsHorizontal cardListToDisplay={getRequestedType} />
     </>
   );
 };
