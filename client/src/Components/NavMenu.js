@@ -11,7 +11,7 @@ import {
   Col,
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { Border, List } from "react-bootstrap-icons";
 export const NavMenu = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -21,12 +21,13 @@ export const NavMenu = () => {
     <Container fluid>
       <Navbar>
         <Button
-          variant="light"
-          style={{ textDecoration: "none" }}
+          style={{ backgroundColor: "transparent", border: "none" }}
           onClick={handleShow}
         >
-          Menu
+          <List style={{ width: "45px", height: "45px" }} />
         </Button>
+
+        <Col>Insert Image</Col>
       </Navbar>
     </Container>
   );
